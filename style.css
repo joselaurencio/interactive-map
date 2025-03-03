@@ -67,3 +67,55 @@ footer {
         width: 95%;
     }
 }
+/* Make the info section look cleaner and more organized */
+.info {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for geography impact container */
+.geography-impact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Style for each impact item */
+.impact-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles for each section */
+.impact-item h3 {
+    color: #2c3e50;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* List style for better spacing */
+.impact-item ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.impact-item ul li {
+    margin-bottom: 5px;
+}
+
+/* Overall Sources section style */
+h3 {
+    color: #34495e;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
