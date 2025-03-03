@@ -3,78 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map: China & Mongolia</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <title>Interactive Map - China and Mongolia</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="info">
+        <h2>Exploring China and Mongolia</h2>
+        <p>Learn more about the geography, culture, and history of China and Mongolia. Scroll down to explore the map and more details.</p>
+    </div>
 
-    <!-- HEADER SECTION -->
-    <header>
-        <h1>🌍 Interactive Map of China & Mongolia</h1>
-        <p>Explore key locations, history, and culture of these fascinating countries.</p>
-    </header>
+    <!-- Map Image Section -->
+    <div class="map-container">
+        <img src="images/china_mongolia_map.jpg" alt="Map of China and Mongolia" class="map-image">
+    </div>
 
-    <!-- MAP CONTAINER -->
-    <div id="map"></div>
-
-    <!-- INFO SECTION -->
-    <section class="info">
-        <h2>📍 Geography's Impact on Travel, Tourism, and Daily Life</h2>
-        <p>Geography plays a significant role in shaping travel, tourism, and daily life, especially in countries like China and Mongolia. The landscape, climate, and physical barriers impact how people live, move around, and explore these areas. Below are the key ways geography influences these aspects:</p>
-    
-        <div class="geography-impact">
-            <!-- Travel Routes Section -->
-            <div class="impact-item">
-                <h3>🚗 Travel Routes</h3>
-                <p>The vast distances and diverse terrains in countries like China and Mongolia make travel more time-consuming and challenging. For example:</p>
-                <ul>
-                    <li>China's mountainous regions and Mongolia's expansive steppes create difficult conditions for building road networks.</li>
-                    <li>In rural areas, roads and airports can still be limited, affecting travel efficiency.</li>
-                </ul>
-                <p>As noted by the World Travel & Tourism Council, China's transportation infrastructure has developed over time to address these challenges, though rural regions remain less accessible.</p>
-            </div>
-    
-            <!-- Tourism Attractions Section -->
-            <div class="impact-item">
-                <h3>🌍 Tourism Attractions</h3>
-                <p>Geography creates unique opportunities for tourism, drawing millions of visitors each year. Key examples include:</p>
-                <ul>
-                    <li><strong>China:</strong> The Great Wall, the Yangtze River, and Mount Everest offer natural wonders and cultural experiences.</li>
-                    <li><strong>Mongolia:</strong> The Gobi Desert and the nomadic lifestyle provide an adventurous and distinctive tourism experience.</li>
-                </ul>
-                <p>According to the International Journal of Tourism Research, geographic features heavily influence tourism flow and patterns, with each country's natural wonders shaping the types of experiences offered to visitors.</p>
-            </div>
-    
-            <!-- Daily Life Section -->
-            <div class="impact-item">
-                <h3>🏠 Daily Life</h3>
-                <p>Geography also impacts the way people live, especially in regions with extreme or unique climates. Here are some examples:</p>
-                <ul>
-                    <li>In Tibet's mountainous areas, life revolves around altitude and harsh weather conditions, influencing housing and transportation.</li>
-                    <li>In Mongolia, people maintain a nomadic lifestyle, moving based on seasonal geography and available resources.</li>
-                </ul>
-                <p>The *Human Geography: A Place-Based Introduction* textbook highlights how such geographical factors shape the cultural and social life of local communities, influencing everything from food to clothing and housing.</p>
-            </div>
+    <div class="geography-impact">
+        <div class="impact-item">
+            <h3>Geography & Travel</h3>
+            <p>The geography of China and Mongolia significantly influences travel and tourism. The rugged terrains in Mongolia and the vast size of China present unique challenges for transportation.</p>
         </div>
-    
-        <h3>Sources:</h3>
-        <ul>
-            <li>World Travel & Tourism Council. (2022). <em>Travel & Tourism in China</em>.</li>
-            <li>International Journal of Tourism Research. (2017). <em>Geography and Tourism Flows</em>.</li>
-            <li><em>Human Geography: A Place-Based Introduction</em> by Mark C. Schober.</li>
-        </ul>
-    </section>
-        
+        <div class="impact-item">
+            <h3>Culture & Geography</h3>
+            <p>In China, the diverse landscapes have influenced the cultural and historical developments, while Mongolia's steppes continue to shape its nomadic traditions.</p>
+        </div>
+    </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Made with a lot of effort by <strong>Jose</strong> | Powered by Leaflet.js & GitHub Pages please follow me on Instagram @joselaurencio_</p>
-    </footer>
-
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
-
+    <h3>Sources</h3>
+    <ul>
+        <li>Travel Guide to China</li>
+        <li>Geography of Mongolia - National Geographic</li>
+        <li>China Travel Insights</li>
+    </ul>
 </body>
 </html>
