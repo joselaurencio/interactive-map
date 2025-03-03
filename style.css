@@ -95,3 +95,31 @@ footer {
     color: #ecf0f1;
     text-align: center;
     padding: 20px;
+    font-size: 1.1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Link Styling */
+a {
+    color: #1abc9c; /* Highlight color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+
+    .geography-impact {
+        gap: 20px;
+    }
+}
