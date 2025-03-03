@@ -1,9 +1,9 @@
-/* General layout improvements */
+/* General body styling */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light background for better contrast */
+    background-color: #f4f4f4;
 }
 
 /* Header styling */
@@ -12,20 +12,6 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-}
-
-/* Map image styling */
-.map-container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.map-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Optional, for a smoother edge */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow around the image */
 }
 
 /* Information section styling */
@@ -46,6 +32,41 @@ header {
 .info p {
     color: #7f8c8d;
     line-height: 1.6;
+}
+
+/* Geography Impact section */
+.geography-impact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.impact-item {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.impact-item h3 {
+    color: #2c3e50;
+    font-size: 1.4em;
+}
+
+.impact-item p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Sources list styling */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
 }
 
 /* Footer styling */
