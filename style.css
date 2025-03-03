@@ -6,79 +6,52 @@ body {
     background-color: #f4f4f4; /* Light background for better contrast */
 }
 
-/* Make the info section look cleaner and more organized */
-.info {
-    max-width: 1100px;  /* Limit the width to make content less stretched */
-    margin: 20px auto;  /* Center the content and add top/bottom margin */
+/* Header styling */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
     padding: 20px;
-    background-color: white;  /* Background color for the content */
-    border-radius: 8px;  /* Rounded corners for the container */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Light shadow around the section */
 }
 
-/* Add more space between paragraphs and sections */
-.info p,
-.info h2,
-.info h3 {
-    margin-bottom: 20px;  /* Adds space below headers and paragraphs */
-}
-
-/* Style for the map container */
+/* Map image styling */
 .map-container {
-    width: 100%;
-    text-align: center;  /* Center the map */
-    margin-top: 30px; /* Adds some space above the map */
-}
-
-/* Style for the map image */
-.map-image {
-    width: 90%; /* Makes the image responsive by limiting the width */
-    max-width: 1100px; /* Max width to avoid image being too large */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for a cleaner look */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow around the map */
-}
-
-/* Add hover effect */
-.map-image:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    transition: transform 0.3s ease-in-out; /* Smooth transition */
-}
-
-/* Geography impact section styling */
-.geography-impact {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Style for each impact item */
-.impact-item {
-    background-color: #f9f9f9;
+.map-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional, for a smoother edge */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow around the image */
+}
+
+/* Information section styling */
+.info {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
     border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 0 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Heading styles for each section */
-.impact-item h3 {
-    color: #2c3e50;
-    font-size: 1.4em;
-    margin-bottom: 15px;
-}
-
-/* Overall Sources section style */
-h3 {
+.info h2 {
     color: #34495e;
-    margin-top: 40px;
+    font-size: 1.8em;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+.info p {
+    color: #7f8c8d;
+    line-height: 1.6;
 }
 
-ul li {
-    margin-bottom: 12px;
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
 }
