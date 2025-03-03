@@ -54,3 +54,16 @@ footer {
     font-size: 14px;
     opacity: 0.7;
 }
+/* Makes sure content fits small screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+    header p, .info p {
+        font-size: 14px;
+    }
+    #map {
+        height: 400px;
+        width: 95%;
+    }
+}
