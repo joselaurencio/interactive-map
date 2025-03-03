@@ -1,50 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Information: China and Mongolia</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Travel Information: China and Mongolia</h1>
-    </header>
+/* General body styling for dark theme */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ecf0f1; /* Light text color for better contrast */
+}
 
-    <!-- Information Section -->
-    <section class="info">
-        <h2>Geography of China and Mongolia</h2>
-        <p>China and Mongolia have vastly different geographical features, influencing various aspects of life, including travel and daily activities. Let's explore the geographic factors that shape these countries.</p>
+/* Header styling */
+header {
+    background-color: #2c3e50; /* Darker shade for header */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-        <div class="geography-impact">
-            <div class="impact-item">
-                <h3>1. Climate Impact</h3>
-                <p>The vast geographical size and altitude of China and Mongolia result in diverse climates. In Mongolia, the climate is harsh, with long, cold winters and short summers. This affects travel as some areas are only accessible in warmer months. In China, the climate varies, ranging from tropical in the south to temperate in the north, which influences tourism and transportation systems.</p>
-            </div>
+header h1 {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    margin: 0;
+}
 
-            <div class="impact-item">
-                <h3>2. Terrain and Accessibility</h3>
-                <p>Mongolia's terrain is mostly flat with vast deserts and mountain ranges, while China has varied landscapes with coastal regions, mountains, plateaus, and rivers. These terrains make it easier to travel by train in China but more challenging in Mongolia, where nomadic lifestyles are common, and infrastructure is less developed.</p>
-            </div>
+/* Information section styling */
+.info {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #34495e; /* Darker background for content */
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
 
-            <div class="impact-item">
-                <h3>3. Urbanization and Development</h3>
-                <p>China has rapidly developed urban centers like Beijing, Shanghai, and Guangzhou, making travel easier via modern highways, high-speed rail, and airports. Mongolia, however, is less urbanized, and its capital, Ulaanbaatar, is the primary urban hub, while the rest of the country remains sparsely populated, limiting infrastructure and accessibility.</p>
-            </div>
-        </div>
+.info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
 
-        <h3>Sources:</h3>
-        <ul>
-            <li>National Geographic - China</li>
-            <li>World Travel Guide - Mongolia</li>
-            <li>China’s Geography: The Impact of Climate and Location by National Geography</li>
-        </ul>
-    </section>
+.info p {
+    color: #bdc3c7; /* Slightly lighter text for paragraphs */
+    line-height: 1.7;
+}
 
-    <footer>
-        <p>Created by Jose Laurencio | Travel Info Website</p>
-    </footer>
+/* Geography Impact section */
+.geography-impact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.impact-item {
+    background-color: #2c3e50; /* Slightly lighter background for each section */
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.impact-item h3 {
+    font-size: 1.6em;
+    color: #ecf0f1;
+    margin-bottom: 15px;
+}
+
+.impact-item p {
+    color: #bdc3c7;
+    line-height: 1.6;
+}
+
+.impact-item ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.impact-item ul li {
+    margin-bottom: 10px;
+}
+
+/* Sources list styling */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    color: #bdc3c7;
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Link Styling */
+a {
+    color: #1abc9c; /* Highlight color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for mobile */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .info {
+        padding: 20px;
+    }
+
+    .geography-impact {
+        gap: 20px;
+    }
+}
