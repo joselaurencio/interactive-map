@@ -1,35 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Website Loaded Successfully!");
+// Initialize the map and set view to a specific location (latitude, longitude)
+var map = L.map('map').setView([29.4241, -98.4936], 10); // San Antonio, TX
 
-    // Dark Mode Toggle
-    const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const body = document.body;
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
 
-    // Check if user has a preferred mode stored
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.textContent = "☀️ Light Mode";
-    }
-
-    darkModeToggle.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
-
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("dark-mode", "enabled");
-            darkModeToggle.textContent = "☀️ Light Mode";
-        } else {
-            localStorage.setItem("dark-mode", "disabled");
-            darkModeToggle.textContent = "🌙 Dark Mode";
-        }
-    });
-
-    // Smooth Scrolling for Navigation
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-});
+// Add a marker
+var marker = L.marker([29.4241, -98.4936]).addTo(map)
+    .bindPopup("Hello, San Antonio!")
+    .openPopup();
