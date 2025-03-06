@@ -3,60 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China & Mongolia Travel Guide</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Interactive Map: China & Mongolia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
 
+    <!-- HEADER SECTION -->
     <header>
-        <h1>China & Mongolia Travel Guide</h1>
-        <button id="dark-mode-toggle">🌙 Dark Mode</button>
-        <nav>
-            <ul>
-                <li><a href="#itinerary">Itinerary</a></li>
-                <li><a href="#china-climate">China Climate</a></li>
-                <li><a href="#china-terrain">China Terrain</a></li>
-                <li><a href="#mongolia-climate">Mongolia Climate</a></li>
-                <li><a href="#mongolia-terrain">Mongolia Terrain</a></li>
-            </ul>
-        </nav>
+        <h1>🌍 Interactive Map of China & Mongolia</h1>
+        <p>Explore key locations, history, and culture of these fascinating countries.</p>
     </header>
 
-    <section id="itinerary">
-        <h2>Travel Itinerary</h2>
-        <p><strong>Day 1: Beijing – Cultural & Historical Exploration</strong></p>
-        <ul>
-            <li><strong>Morning:</strong> Forbidden City (8:00 AM - 11:00 AM)</li>
-            <li><strong>Lunch:</strong> Donghuamen Night Market (11:30 AM - 1:00 PM)</li>
-            <li><strong>Afternoon:</strong> Tiananmen Square & Temple of Heaven (1:30 PM - 5:00 PM)</li>
-            <li><strong>Evening:</strong> Peking Duck Dinner at Quanjude (6:30 PM - 8:00 PM)</li>
-        </ul>
+    <!-- MAP CONTAINER -->
+    <div id="map"></div>
+
+    <!-- INFO SECTION -->
+    <section class="info">
+        <h2>📍 About This Map</h2>
+        <p>This interactive map showcases important places in China and Mongolia. Click on markers to learn about historical sites, cities, and natural wonders.</p>
     </section>
 
-    <section id="china-climate">
-        <h2>China Climate</h2>
-        <p>China's northern regions, including Beijing, experience freezing winters, requiring more heating and affecting transportation...</p>
-    </section>
-
-    <section id="china-terrain">
-        <h2>China Terrain</h2>
-        <p>The Himalayas and Tibetan Plateau act as natural barriers, making travel difficult despite modern transportation...</p>
-    </section>
-
-    <section id="mongolia-climate">
-        <h2>Mongolia Climate</h2>
-        <p>Mongolia has extreme temperatures, with harsh winters (-40°C) making travel difficult and hot, dry summers impacting agriculture...</p>
-    </section>
-
-    <section id="mongolia-terrain">
-        <h2>Mongolia Terrain</h2>
-        <p>The vast steppe supports pastoralism, with travel mostly done by horse, camel, or off-road vehicles...</p>
-    </section>
-
+    <!-- FOOTER -->
     <footer>
-        <p>© 2025 China & Mongolia Travel Guide</p>
+        <p>Made with ❤️ by <strong>Jose</strong> | Powered by Leaflet.js & GitHub Pages</p>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
 </html>
