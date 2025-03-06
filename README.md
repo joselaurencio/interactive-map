@@ -3,7 +3,7 @@
 This is a simple interactive map created using **Leaflet.js** and hosted on **GitHub Pages**. It highlights key locations in **China and Mongolia** with informative popups.
 
 ## 🚀 Live Demo
-👉 **[View the Map](https://robocodexyt.github.io/interactive-map/)** 
+👉 **[View the Map](https://joselaurencio.github.io/interactive-map/)** 
 
 ## 🗺 Features
 - **Interactive map** centered on China & Mongolia.
