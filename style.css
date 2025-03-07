@@ -61,3 +61,61 @@ footer {
     font-size: 14px;
     opacity: 0.7;
 }
+/* ITINERARY STYLING */
+.itinerary {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.itinerary h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+.itinerary-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.itinerary-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.itinerary-card p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+}
+
+.itinerary-card button {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.itinerary-card button:hover {
+    background-color: #e6b800;
+}
+
+.itinerary-content {
+    display: none;
+    padding-top: 10px;
+}
+
+.itinerary-card.active .itinerary-content {
+    display: block;
+}
