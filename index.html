@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        function toggleInfo(id) {
+            var section = document.getElementById(id);
+            section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+        }
+    </script>
 </head>
 <body>
 
@@ -28,6 +34,27 @@
         <p>This interactive map showcases important places in China and Mongolia. Click on markers to learn about historical sites, cities, and natural wonders.</p>
     </section>
 
+    <!-- CLIMATE & TERRAIN INFO -->
+    <section class="info">
+        <h2 onclick="toggleInfo('climate-terrain')" style="cursor: pointer; color: blue;">🌎 Climate & Terrain (Click to Expand)</h2>
+        <div id="climate-terrain" style="display: none;">
+            <h3>Climate in China</h3>
+            <p>The northern regions of China, including Beijing and Inner Mongolia, experience cold winters with temperatures often dropping below freezing. Harsh winters impact transportation due to ice and snow. The southern regions, such as Guangzhou and Hong Kong, have hot, humid summers and mild winters. The rainy season can cause flooding, affecting transportation and agriculture. Western China, including Tibet and Xinjiang, faces extreme climates, rugged terrain, and travel difficulties.</p>
+            
+            <h3>Terrain in China</h3>
+            <p>The Himalayas and Tibetan Plateau form natural barriers that limit overland travel. While modern high-speed railways improve accessibility, terrain challenges remain. The Yangtze and Yellow Rivers support agriculture and transportation, while the Gobi and Taklamakan Deserts present harsh conditions for travel and settlement.</p>
+            
+            <h3>Climate in Mongolia</h3>
+            <p>Mongolia’s climate is extreme, with winters dropping below -40°C and summers being hot and dry. This impacts travel, water resources, and agriculture. Due to short growing seasons, many Mongolians rely on livestock instead of crops.</p>
+            
+            <h3>Terrain in Mongolia</h3>
+            <p>Mongolia’s vast steppe is ideal for traditional pastoralism, with travel mainly by horse, camel, or off-road vehicles. The Gobi Desert in the south presents extreme conditions, while mountain ranges like the Altai create natural barriers that can make travel difficult.</p>
+            
+            <h3>Impact on Travel</h3>
+            <p>China has an advanced transportation system, including high-speed trains and modern highways, but remote areas remain challenging. Mongolia’s infrastructure is less developed, with nomadic lifestyles influencing travel patterns. Many roads in Mongolia are unpaved, making off-road navigation essential.</p>
+        </div>
+    </section>
+    
     <!-- FOOTER -->
     <footer>
         <p>Made with ❤️ by <strong>Jose</strong> | Powered by Leaflet.js & GitHub Pages</p>
