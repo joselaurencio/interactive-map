@@ -30,3 +30,7 @@ locations.forEach(loc => {
     L.marker([loc.lat, loc.lon]).addTo(map)
         .bindPopup(`<b>${loc.name}</b><br>${loc.desc}`);
 });
+function toggleItinerary(day) {
+    var content = document.getElementById(day);
+    content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+}
