@@ -31,4 +31,4 @@ var greatWall = L.polygon([
     color: "red",
     fillColor: "#f03",
     fillOpacity: 0.5
-}).addTo(map).bindPopup("<b>Great Wall of China 🏯</b><br>One of the greatest wonders of the world.");
+}).addTo(map).bindPopup("<b>Great Wall of China 🏯</b><br>One of the greatest wonders of the world. Pretty cool right?");
