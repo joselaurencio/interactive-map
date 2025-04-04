@@ -3,120 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map: China & Mongolia</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-        function toggleInfo(id) {
-            var section = document.getElementById(id);
-            section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
-        }
-    </script>
+    <title>Mapping the Land: Korea</title>
+    
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- HEADER SECTION -->
     <header>
-        <h1>🌍 Interactive Map of China & Mongolia</h1>
-        <p>Explore key locations, history, and culture of these fascinating countries.</p>
+        <h1>Mapping the Land: Korea</h1>
     </header>
-    
-    <!-- MAP CONTAINER -->
+
+    <!-- Interactive Map -->
     <div id="map"></div>
-    
-    <!-- Sadie's Map Display -->
-    <figure style="text-align: center;">
-        <img src="images/Image from Scenic Hills Mail.jpeg" alt="Hand-drawn map of Mongolia and China by Sadie" style="max-width: 300px; border: 2px solid #ccc; border-radius: 10px; padding: 5px;">
-        <figcaption style="font-style: italic; font-size: 14px; color: #555;">Hand-drawn map by Sadie - A creative representation of China & Mongolia.</figcaption>
-    </figure>
-    
-    <!-- INFO SECTION -->
+
+    <!-- Information Section -->
     <section class="info">
-        <h2>📍 About This Map</h2>
-        <p>This interactive map showcases important places in China and Mongolia. Click on markers to learn about historical sites, cities, and natural wonders.</p>
+        <h2>Physical Geography of North & South Korea</h2>
+        <p>Explore the major geographic features of Korea, including mountains, rivers, and climate regions.</p>
+        
+        <h3>How Geography Affects Life</h3>
+        <p>
+            The mountainous terrain of North Korea limits agriculture, making the country more reliant on mining and trade. In contrast, South Korea's flatter land and coastal access have helped it become a global trade hub. Rivers such as the Han and Yalu play an essential role in farming and transportation. Additionally, the surrounding seas impact fishing and shipbuilding industries. Climate differences also affect agriculture and urban development in both nations.
+        </p>
     </section>
-    <section class="itinerary">
-        <h2>🗺️ China & Mongolia Travel Itinerary</h2>
-    
-        <div class="itinerary-card">
-            <h3>📍 Day 1: Beijing – Cultural & Historical Exploration</h3>
-            <button onclick="toggleItinerary('day1')">View Details</button>
-            <div id="day1" class="itinerary-content">
-                <p><strong>Morning:</strong> Forbidden City 🏯 (8:00 AM – 11:00 AM)</p>
-                <p><strong>Lunch:</strong> Donghuamen Night Market 🍜 (11:30 AM – 1:00 PM)</p>
-                <p><strong>Afternoon:</strong> Tiananmen Square & Temple of Heaven ⛩️</p>
-                <p><strong>Evening:</strong> Peking Duck Dinner at Quanjude 🦆</p>
-            </div>
-        </div>
-    
-        <div class="itinerary-card">
-            <h3>🏯 Day 2: Beijing – The Great Wall & Summer Palace</h3>
-            <button onclick="toggleItinerary('day2')">View Details</button>
-            <div id="day2" class="itinerary-content">
-                <p><strong>Morning:</strong> Great Wall of China – Mutianyu Section 🏗️</p>
-                <p><strong>Lunch:</strong> Local Restaurant 🍚</p>
-                <p><strong>Afternoon:</strong> Summer Palace & Lama Temple 🛕</p>
-                <p><strong>Evening:</strong> Dinner at Da Dong Roast Duck 🍽️</p>
-            </div>
-        </div>
-    
-        <div class="itinerary-card">
-            <h3>🏜️ Day 3: Ulaanbaatar – Cultural Heritage</h3>
-            <button onclick="toggleItinerary('day3')">View Details</button>
-            <div id="day3" class="itinerary-content">
-                <p><strong>Morning:</strong> Fly from Beijing to Ulaanbaatar ✈️</p>
-                <p><strong>Afternoon:</strong> Sukhbaatar Square & National Museum 🏛️</p>
-                <p><strong>Evening:</strong> Traditional Mongolian Performance 🎭</p>
-            </div>
-        </div>
-    
-        <div class="itinerary-card">
-            <h3>🏕️ Day 4: Terelj National Park – Nature & Adventure</h3>
-            <button onclick="toggleItinerary('day4')">View Details</button>
-            <div id="day4" class="itinerary-content">
-                <p><strong>Morning:</strong> Drive to Terelj National Park 🚗</p>
-                <p><strong>Afternoon:</strong> Hiking & Turtle Rock 🥾</p>
-                <p><strong>Evening:</strong> Visit a Nomadic Family 🏕️</p>
-            </div>
-        </div>
-    
-        <div class="itinerary-card">
-            <h3>🐎 Day 5: Khustain Nuruu National Park & Return</h3>
-            <button onclick="toggleItinerary('day5')">View Details</button>
-            <div id="day5" class="itinerary-content">
-                <p><strong>Morning:</strong> Visit Khustain Nuruu National Park 🌿</p>
-                <p><strong>Afternoon:</strong> Return to Ulaanbaatar & Flight to Beijing ✈️</p>
-            </div>
-        </div>
-    </section>
-    <!-- CLIMATE & TERRAIN INFO -->
-    <section class="info">
-        <h2 onclick="toggleInfo('climate-terrain')" style="cursor: pointer; color: blue;">🌎 Climate & Terrain (Click to Expand)</h2>
-        <div id="climate-terrain" style="display: none;">
-            <h3>Climate in China</h3>
-            <p>The northern regions of China, including Beijing and Inner Mongolia, experience cold winters with temperatures often dropping below freezing. Harsh winters impact transportation due to ice and snow. The southern regions, such as Guangzhou and Hong Kong, have hot, humid summers and mild winters. The rainy season can cause flooding, affecting transportation and agriculture. Western China, including Tibet and Xinjiang, faces extreme climates, rugged terrain, and travel difficulties.</p>
-            
-            <h3>Terrain in China</h3>
-            <p>The Himalayas and Tibetan Plateau form natural barriers that limit overland travel. While modern high-speed railways improve accessibility, terrain challenges remain. The Yangtze and Yellow Rivers support agriculture and transportation, while the Gobi and Taklamakan Deserts present harsh conditions for travel and settlement.</p>
-            
-            <h3>Climate in Mongolia</h3>
-            <p>Mongolia’s climate is extreme, with winters dropping below -40°C and summers being hot and dry. This impacts travel, water resources, and agriculture. Due to short growing seasons, many Mongolians rely on livestock instead of crops.</p>
-            
-            <h3>Terrain in Mongolia</h3>
-            <p>Mongolia’s vast steppe is ideal for traditional pastoralism, with travel mainly by horse, camel, or off-road vehicles. The Gobi Desert in the south presents extreme conditions, while mountain ranges like the Altai create natural barriers that can make travel difficult.</p>
-            
-            <h3>Impact on Travel</h3>
-            <p>China has an advanced transportation system, including high-speed trains and modern highways, but remote areas remain challenging. Mongolia’s infrastructure is less developed, with nomadic lifestyles influencing travel patterns. Many roads in Mongolia are unpaved, making off-road navigation essential.</p>
-        </div>
-    </section>
-    
-    <!-- FOOTER -->
+
     <footer>
-        <p>Made with ❤️ by <strong>Jose</strong> | Powered by Leaflet.js & GitHub Pages</p>
+        <p>Created by Jose Laurencio | Korean Geography Map</p>
     </footer>
 
-    <!-- JAVASCRIPT -->
+    <!-- Leaflet.js JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 
 </body>
