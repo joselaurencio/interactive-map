@@ -1,36 +1,66 @@
-// Initialize the map and set view to China/Mongolia region
-var map = L.map('map').setView([40.0, 105.0], 4); // Adjust zoom for full view
+// Initialize the map and set view over the Korean Peninsula
+var map = L.map('map').setView([38.5, 127.5], 6);
 
-// Add OpenStreetMap tiles - Dark mode map style
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://carto.com/">CARTO</a>'
+// Add OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Add markers with popups
-var locations = [
-    { lat: 39.9042, lon: 116.4074, name: "Beijing, China 🇨🇳", desc: "Capital of China. Home to the Great Wall, Forbidden City, and Tiananmen Square." },
-    { lat: 31.2304, lon: 121.4737, name: "Shanghai, China 🌆", desc: "China's largest city and financial hub." },
-    { lat: 47.9186, lon: 106.9176, name: "Ulaanbaatar, Mongolia 🇲🇳", desc: "Capital of Mongolia, famous for its cold winters and nomadic culture." },
-    { lat: 42.5, lon: 105.0, name: "Gobi Desert 🏜️", desc: "A vast desert spanning China & Mongolia, known for its extreme climate." },
-    { lat: 40.68, lon: 117.23, name: "Great Wall of China 🏯", desc: "One of the greatest wonders of the world." },
-    { lat: 39.915, lon: 116.404, name: "Forbidden City 🏯", desc: "China’s former imperial palace, a UNESCO World Heritage site." },
-    { lat: 39.9087, lon: 116.3975, name: "Tiananmen Square 🇨🇳", desc: "The largest public square in the world, rich with history." },
-    { lat: 39.8822, lon: 116.4066, name: "Temple of Heaven ⛩", desc: "A Taoist temple where emperors once prayed for good harvests." },
-    { lat: 40.4319, lon: 116.5704, name: "Great Wall - Mutianyu 🏯", desc: "A scenic and less crowded section of the Great Wall." },
-    { lat: 39.9996, lon: 116.2755, name: "Summer Palace 🌊", desc: "A historic imperial garden blending cultural history and natural beauty." },
-    { lat: 39.9406, lon: 116.4179, name: "Lama Temple ⛩", desc: "A Tibetan Buddhist temple with stunning architecture." },
-    { lat: 48.036, lon: 107.1610, name: "Terelj National Park ⛰", desc: "Famous for its rock formations, wildlife, and scenic landscapes." },
-    { lat: 47.7994, lon: 106.9182, name: "Sukhbaatar Square 🇲🇳", desc: "The central square of Ulaanbaatar, named after Mongolia’s revolutionary hero." },
-    { lat: 47.915, lon: 106.917, name: "National Museum of Mongolia 🏛", desc: "A museum showcasing Mongolian history, including the Mongol Empire." },
-    { lat: 47.7100, lon: 106.4323, name: "Khustain Nuruu National Park 🐴", desc: "Home to the rare Przewalski’s horse and beautiful steppe landscapes." }
+// Markers for major mountains
+var mountains = [
+    { name: "Taebaek Mountains", lat: 37.5, lng: 128.3 },
+    { name: "Baekdu Mountain", lat: 41.8, lng: 128.1 }
 ];
 
-// Add markers to the map
-locations.forEach(loc => {
-    L.marker([loc.lat, loc.lon]).addTo(map)
-        .bindPopup(`<b>${loc.name}</b><br>${loc.desc}`);
+mountains.forEach(mountain => {
+    L.marker([mountain.lat, mountain.lng])
+        .addTo(map)
+        .bindPopup(`<b>${mountain.name}</b>`);
 });
-function toggleItinerary(day) {
-    var content = document.getElementById(day);
-    content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
-}
+
+// Markers for rivers
+var rivers = [
+    { name: "Han River", lat: 37.57, lng: 126.98 },
+    { name: "Yalu River", lat: 40.0, lng: 124.3 }
+];
+
+rivers.forEach(river => {
+    L.marker([river.lat, river.lng])
+        .addTo(map)
+        .bindPopup(`<b>${river.name}</b>`);
+});
+
+// Borders & neighboring countries (Outline for Korea)
+var koreaBorder = [
+    [43.0, 130.0], [42.5, 129.5], [40.5, 128.5], [38.0, 126.0], [37.0, 125.5], [35.0, 129.5]
+];
+
+L.polygon(koreaBorder, {
+    color: 'red',
+    weight: 2,
+    fillOpacity: 0
+}).addTo(map).bindPopup("Border of North & South Korea");
+
+// Capitals
+var capitals = [
+    { name: "Seoul (South Korea)", lat: 37.5665, lng: 126.9780 },
+    { name: "Pyongyang (North Korea)", lat: 39.0194, lng: 125.7381 }
+];
+
+capitals.forEach(capital => {
+    L.marker([capital.lat, capital.lng], { icon: L.icon({ iconUrl: 'https://cdn-icons-png.flaticon.com/512/684/684908.png', iconSize: [30, 30] }) })
+        .addTo(map)
+        .bindPopup(`<b>${capital.name}</b>`);
+});
+
+// Bodies of water
+var bodiesOfWater = [
+    { name: "Yellow Sea", lat: 36.5, lng: 123.5 },
+    { name: "Sea of Japan (East Sea)", lat: 39.0, lng: 132.0 }
+];
+
+bodiesOfWater.forEach(water => {
+    L.marker([water.lat, water.lng])
+        .addTo(map)
+        .bindPopup(`<b>${water.name}</b>`);
+});
