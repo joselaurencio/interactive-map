@@ -4,33 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Korean Peninsula Geography Map</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  
+  <!-- Leaflet.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <header>
     <h1>Korean Peninsula Geography</h1>
   </header>
 
+  <!-- Map Section -->
   <div id="map"></div>
 
+  <!-- Info Section -->
   <section class="info">
     <h2>Geography and Its Impact</h2>
     <p>
-      The physical geography of North and South Korea plays a major role in how people live. 
-      Mountainous terrain in North Korea limits farmland, while South Korea’s flatter land near rivers supports agriculture and cities. 
-      Rivers like the Han and Yalu are crucial for trade and transport. Coastal access helps with fishing and global trade. 
-      Natural barriers like mountains also influence defense and communication.
+      The physical geography of North and South Korea plays a major role in daily life. 
+      Mountainous terrain, such as the Taebaek Mountains, limits farmland in parts of North Korea, while South Korea’s flatter regions near its rivers promote agriculture and urban development. 
+      Rivers like the Han and Yalu are vital for trade and transport. 
+      Coastal access boosts fishing and global trade, and natural boundaries also affect defense strategies.
     </p>
   </section>
 
   <footer>
-    <p>© Jose | Korean Peninsula Map Project</p>
+    <p>© Jose Laurencio | Korean Peninsula Map Project</p>
   </footer>
 
+  <!-- Leaflet.js JavaScript (placed before our script so it loads first) -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script.js"></script>
-
+  <!-- Our custom JavaScript -->
+  <script src="script.js" defer></script>
 </body>
 </html>
